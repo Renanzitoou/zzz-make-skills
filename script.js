@@ -54,6 +54,29 @@ function insertIcon(type){
     updatePreview();
 }
 
+///formatar texto
+
+// Formata todo o texto, limpa formatação mas mantém quebras de linha
+function formatAllText() {
+    const text = editor.innerText; // pega texto puro com quebras de linha
+    const lines = text.split(/\n/); // separa por linha
+
+    // Limpa editor
+    editor.innerHTML = "";
+
+    // Cria spans ou divs para cada linha com <br> para manter visual
+    lines.forEach((line, index) => {
+        const span = document.createElement("span");
+        span.textContent = line;
+        editor.appendChild(span);
+        if (index < lines.length - 1) {
+            editor.appendChild(document.createElement("br"));
+        }
+    });
+
+    updatePreview();
+}
+
 /* ===== EXPORTAR PNG ===== */
 
 async function exportImage(){
@@ -133,4 +156,5 @@ async function exportImage(){
     link.download = "zzz-text.png";
     link.href = canvas.toDataURL("image/png");
     link.click();
+
 }
