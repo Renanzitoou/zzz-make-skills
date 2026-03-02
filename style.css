@@ -1,0 +1,109 @@
+body{
+    background:#0e0e13;
+    color:white;
+    font-family: Arial, sans-serif;
+    padding:40px;
+}
+
+h1{
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.toolbar{
+    margin-bottom:15px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+/* BOTÕES BASE */
+
+button{
+    background:#1b1b24;
+    border:1px solid #2d2d3a;
+    color:white;
+    padding:6px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.2s;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-weight:600;
+}
+
+button:hover{
+    background:#2a2a38;
+}
+
+/* BOTÕES ELEMENTAIS */
+
+.element-btn{
+    border:1px solid;
+}
+
+.element-ether{ border-color:#fe437e; color:#fe437e; }
+.element-physical{ border-color:#f0d12b; color:#f0d12b; }
+.element-ice{ border-color:#98eff0; color:#98eff0; }
+.element-fire{ border-color:#ff5521; color:#ff5521; }
+.element-electric{ border-color:#2eb6ff; color:#2eb6ff; }
+.element-life{ border-color:#2bad00; color:#2bad00; }
+
+/* BOTÕES SKILL */
+
+.skill-btn{
+    background:#15151c;
+    border:1px solid #3a3a4d;
+}
+
+/* BOTÕES ÍCONE PURO */
+
+.icon-btn{
+    width:36px;
+    height:36px;
+    justify-content:center;
+    font-size:18px;
+    padding:0;
+}
+
+/* EDITOR */
+
+.editor{
+    background:#1a1a22;
+    padding:20px;
+    border-radius:12px;
+    min-height:120px;
+    outline:none;
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* PREVIEW */
+
+.preview-box{
+    margin-top:30px;
+    background:202020;
+    padding:30px;
+    border-radius:16px;
+    font-size:20px;
+    line-height:1.7;
+}
+
+/* CORES ELEMENTAIS */
+
+.ether{ color:#fe437e; font-weight:bold; }
+.physical{ color:#f0d12b; font-weight:bold; }
+.ice{ color:#98eff0; font-weight:bold; }
+.fire{ color:#ff5521; font-weight:bold; }
+.electric{ color:#2eb6ff; font-weight:bold; }
+.life{ color:#2bad00; font-weight:bold; }
+
+/* ICONES */
+
+.icon{
+    width:22px;
+    height:22px;
+    vertical-align:middle;
+    margin:0 4px;
+}

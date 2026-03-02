@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>ZZZ Guide Text Editor</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<h1>EDITOR DE HABILIDIDADES - ZENLESS ZONE ZERO</h1>
+
+<div class="toolbar">
+
+    <!-- ELEMENTAIS -->
+    <button class="element-btn element-ether" onclick="wrap('ether')">Éter</button>
+    <button class="element-btn element-physical" onclick="wrap('physical')">Físico</button>
+    <button class="element-btn element-ice" onclick="wrap('ice')">Gelo</button>
+    <button class="element-btn element-fire" onclick="wrap('fire')">Fogo</button>
+    <button class="element-btn element-electric" onclick="wrap('electric')">Elétrico</button>
+    <button class="element-btn element-life" onclick="wrap('life')">HP</button>
+
+    <!-- NEGRITO -->
+    <button class="icon-btn" onclick="boldText()">𝐍</button>
+
+    <!-- SKILLS -->
+    <button class="skill-btn" onclick="insertIcon('basic')">Ataque Básico</button>
+    <button class="skill-btn" onclick="insertIcon('special')">Especial Reforçado</button>
+    <button class="skill-btn" onclick="insertIcon('assist')">Assistência</button>
+    <button class="skill-btn" onclick="insertIcon('dodge')">Esquiva</button>
+    <button class="skill-btn" onclick="insertIcon('ultimate')">Ultimate</button>
+    <button class="skill-btn" onclick="insertIcon('main')">Hab. Principal</button>
+
+    <!-- DOWNLOAD -->
+    <button class="icon-btn" onclick="exportImage()">⬇</button>
+
+    <!-- COPIAR -->
+    <button class="icon-btn" onclick="copyImage()">📋</button>
+
+</div>
+
+<div class="editor" contenteditable="true" id="editor">
+Digite seu texto aqui...
+</div>
+
+<div class="preview-box" id="preview"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
