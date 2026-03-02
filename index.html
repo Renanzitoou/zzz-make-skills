@@ -1,57 +1,56 @@
 <!DOCTYPE html>
-<HTML língua="pt-br">
-<cabeça>
-<meta conjunto de caracteres="UTF-8">
-<título>Editor de texto do guia ZZZ</título>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>ZZZ Guide Text Editor</title>
 
-<link relação="folha de estilo" href="estilo.css">
+<link rel="stylesheet" href="style.css">
 
 <!-- html2canvas -->
-<roteiro fonte="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></roteiro>
-</caboça>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
 
-<corpo>
+<body>
 
-<h1>EDITOR DE HABILIDADES - ZENLESS ZONE ZERO</h1>
+<h1>EDITOR DE HABILIDIDADES - ZENLESS ZONE ZERO</h1>
 
-<dividir classe="barra de ferramentas">
+<div class="toolbar">
 
-    <!-- ELEMENTOS -->
-    <botão classe="elemento-btn elemento-éter" clicar em="embrulhar('éter')">Éter</botão>
-    <botão classe="elemento-btn elemento-físico" clicar em="embrulhar('físico')">Físico</botão>
-    <botão classe="elemento-btn elemento-gelo" clicar em="embrulhar('gelo')">Gelo</botão>
-    <botão classe="elemento-btn elemento-fogo" clicar em="embrulhar('fogo')">Fogo</botão>
-    <botão classe="elemento-btn elemento-elétrico" clicar em="embrulhar('elétrico')">Elétrico</botão>
-    <botão classe="elemento-btn elemento-vida" clicar em="embrulhar('vida')">HP</botão>
+    <!-- ELEMENTAIS -->
+    <button class="element-btn element-ether" onclick="wrap('ether')">Éter</button>
+    <button class="element-btn element-physical" onclick="wrap('physical')">Físico</button>
+    <button class="element-btn element-ice" onclick="wrap('ice')">Gelo</button>
+    <button class="element-btn element-fire" onclick="wrap('fire')">Fogo</button>
+    <button class="element-btn element-electric" onclick="wrap('electric')">Elétrico</button>
+    <button class="element-btn element-life" onclick="wrap('life')">HP</button>
 
     <button class="icon-btn" onclick="formatAllText()">📝</button>
     <!-- NEGRITO -->
-    <botão classe="ícone-btn" clicar em="texto em negrito()">N</botão>
+    <button class="icon-btn" onclick="boldText()">𝐍</button>
 
-    <!-- HABILIDADES -->
-    <botão classe="habilidade-btn" clicar em="inserirícone('básico')">Ataque Básico</botão>
-    <botão classe="habilidade-btn" clicar em="inserirícone('especial')">Reforçado Especial</botão>
-    <botão classe="habilidade-btn" clicar em="inserirícone('ajudar')">Assistência</botão>
-    <botão classe="habilidade-btn" clicar em="inserirícone('desviar')">Esquiva</botão>
-    <botão classe="habilidade-btn" clicar em="inserirícone('final')">Final</botão>
-    <botão classe="habilidade-btn" clicar em="inserirícone('principal')">Hábito. Principal</botão>
+    <!-- SKILLS -->
+    <button class="skill-btn" onclick="insertIcon('basic')">Ataque Básico</button>
+    <button class="skill-btn" onclick="insertIcon('special')">Especial Reforçado</button>
+    <button class="skill-btn" onclick="insertIcon('assist')">Assistência</button>
+    <button class="skill-btn" onclick="insertIcon('dodge')">Esquiva</button>
+    <button class="skill-btn" onclick="insertIcon('ultimate')">Ultimate</button>
+    <button class="skill-btn" onclick="insertIcon('main')">Hab. Principal</button>
 
-    <!-- BAIXAR -->
-    <botão classe="ícone-btn" clicar em="exportarImagem()">⬇</botão>
+    <!-- DOWNLOAD -->
+    <button class="icon-btn" onclick="exportImage()">⬇</button>
 
     <!-- COPIAR -->
-    <botão classe="ícone-btn" clicar em="copiarImagem()">📋</botão>
+    <button class="icon-btn" onclick="copyImage()">📋</button>
 
-</dividir>
+</div>
 
-<dividir classe="editor" conteúdo="verdadeiro" id="editor">
+<div class="editor" contenteditable="true" id="editor">
 Digite seu texto aqui...
-</dividir>
+</div>
 
-<dividir classe="caixa de visualização" id="prévia"></dividir>
+<div class="preview-box" id="preview"></div>
 
-<roteiro fonte="script.js"></roteiro>
+<script src="script.js"></script>
 
-</corpo>
-
-</HTML>
+</body>
+</html>
